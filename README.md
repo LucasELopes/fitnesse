@@ -1,1 +1,1 @@
-# fitnesse
+# MyGym
