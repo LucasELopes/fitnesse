@@ -18,7 +18,8 @@ class ExerciseFactory extends Factory
     {
         return [
             'exercise_name' => $this->faker->words(2, true),
-            'description' => $this->faker->paragraph(),
+            'description' => $this->faker->words(10, true),
+            'category' => $this->faker->randomElement(['peito', 'costas', 'ombro', 'biceps', 'triceps', 'perna']),
             'tutorial' => $this->faker->url(),
         ];
     }

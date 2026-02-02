@@ -9,4 +9,4 @@ Route::apiResource('exercises', ExerciseController::class)->except('create', 'ed
 
 Route::post('trainings/{training}/exercises', [TrainingController::class, 'addExercise']);
 Route::delete('trainings/{training}/exercises', [TrainingController::class, 'removeExercise']);
-
+Route::put('/trainings/{training}/exercises/{pivot}', [TrainingController::class, 'updateExercise']);

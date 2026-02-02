@@ -24,6 +24,7 @@ class TrainingExerciseRequest extends FormRequest
         return [
             'reps' => ['nullable', 'integer'],
             'weight' => ['nullable', 'numeric'],
+            'week_day' => ['string', 'required', 'in:seg,ter,qua,qui,sex,sab,dom']
         ];
     }
 

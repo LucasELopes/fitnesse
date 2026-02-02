@@ -18,9 +18,14 @@ class Training extends Model
         'description'
     ];
 
-    public function exercises(){
-        return $this->belongsToMany(Exercise::class, 'training_exercises')->withPivot(['reps', 'weight']);
+    public function exercises()
+    {
+        return $this->belongsToMany(Exercise::class, 'training_exercises')
+            ->using(TrainingExercise::class) // <- aqui
+            ->withPivot(['id','week_day','reps','weight'])
+            ->withTimestamps();
     }
+
 
     protected $keyType = 'string';
     public $incrementing = false;

@@ -19,10 +19,17 @@ class ExerciseController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        return $this->exercise->get();
+    public function index(Request $request)
+{
+    $query = Exercise::query();
+
+    if ($request->has('week_day')) {
+        $query->where('week_day', $request->week_day);
     }
+
+    return $query->get();
+}
+
 
     /**
      * Store a newly created resource in storage.

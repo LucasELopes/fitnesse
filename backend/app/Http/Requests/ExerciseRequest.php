@@ -23,6 +23,7 @@ class ExerciseRequest extends FormRequest
     {
         return [
             'exercise_name' => ['string', 'required', 'min:3', 'max:80'],
+            'category' => ['string', 'required', 'in:peito,costas,ombro,biceps,triceps,perna'],
             'description' => ['string', 'nullable'],
             'tutorial' => ['url', 'nullable'],
         ];
@@ -34,6 +35,10 @@ class ExerciseRequest extends FormRequest
             'exercise_name.required' => 'O campo é obrigatório.',
             'exercise_name.min' => 'O campo deve ter no mínimo 3 caracteres.',
             'exercise_name.max' => 'O campo deve ter no máximo 80 caracteres.',
+
+            'category.string' => 'O campo deve ser em texto.',
+            'category.required' => 'O campo é obrigatório.',
+            'category.in' => 'O campo deve ser uma classe válida (peito, costas, ombro, biceps, triceps, perna).',
 
             'description.string' => 'O campo deve ser em texto.',
 

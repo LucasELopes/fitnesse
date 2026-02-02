@@ -16,11 +16,12 @@ class Exercise extends Model
     protected $fillable = [
         'exercise_name',
         'description',
+        'category',
         'tutorial'
     ];
 
     public function trainings(){
-        return $this->belongsToMany(Training::class, 'training_exercises')->withPivot(['reps', 'weight']);
+        return $this->belongsToMany(Training::class, 'training_exercises')->withPivot(['reps', 'weight', 'week_day'])->withTimestamps();
     }
 
     protected $keyType = 'string';

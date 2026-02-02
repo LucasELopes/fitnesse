@@ -12,11 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('training_exercises', function (Blueprint $table) {
-            $table->foreignUuid('training_id')->constrained()->cascadeOnDelete();
-            $table->foreignUuid('exercise_id')->constrained()->cascadeOnDelete();
-            $table->integer('reps');
-            $table->decimal('weight', 6, 2)->nullable();
-            $table->primary(['training_id', 'exercise_id']);
+        $table->uuid('id')->primary();
+        $table->uuid('training_id');
+        $table->uuid('exercise_id');
+        $table->string('week_day');
+        $table->integer('reps');
+        $table->string('weight')->nullable();
+        $table->timestamps();
+        
+        $table->foreign('training_id')->references('id')->on('trainings')->onDelete('cascade');
+        $table->foreign('exercise_id')->references('id')->on('exercises')->onDelete('cascade');
         });
     }
 

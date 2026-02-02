@@ -10,14 +10,17 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class TrainingExercise extends Pivot
 {
     /** @use HasFactory<\Database\Factories\TrainingExerciseFactory> */
-    use HasFactory;
+    use HasFactory, HasUuids;
 
-    public $timestamps = false;
     protected $table = 'training_exercises';
-    
+    public $incrementing = false;
+    protected $keyType = 'string';
+
     protected $fillable = [
+        'id',
         'exercise_id',
         'training_id',
+        'week_day',
         'reps',
         'weight'
     ];
@@ -27,5 +30,15 @@ class TrainingExercise extends Pivot
     }
 
     public function exercise(){
-        return $this->belongsTo(Exercise::class);    }
+        return $this->belongsTo(Exercise::class);    
+    }
+
+    protected static function booted()
+    {
+        static::creating(function ($pivot) {
+            if (!$pivot->id) {
+                $pivot->id = (string) Str::uuid();
+            }
+        });
+    }
 }
