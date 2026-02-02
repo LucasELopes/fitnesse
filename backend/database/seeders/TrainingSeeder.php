@@ -23,6 +23,7 @@ class TrainingSeeder extends Seeder
             $training->exercises()->attach($exercise->id, [
                 'reps' => rand(8, 15),
                 'weight' => rand(0, 120),
+                'week_day' => ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'][array_rand(['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'])],
             ]);
             }
         

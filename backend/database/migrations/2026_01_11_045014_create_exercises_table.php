@@ -15,6 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->timestamps();
             $table->string('exercise_name');
+            $table->string('category');
             $table->text('description');
             $table->string('tutorial');
         });

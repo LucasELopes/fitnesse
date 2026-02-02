@@ -8,6 +8,7 @@ use App\Http\Requests\TrainingExerciseRequest;
 use App\Models\Exercise;
 use App\Models\Training;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TrainingController extends Controller
 {
@@ -18,23 +19,69 @@ class TrainingController extends Controller
         $this->training = $training;
     }
 
-    public function addExercise(Training $training, TrainingExerciseRequest $request){
-        $training->exercises()->syncWithoutDetaching([$request->exercise_id => [
-            'reps' => $request->reps,
-            'weight' => $request->weight,
-        ]
-    ]);
+    public function addExercise(Request $request, Training $training)
+    {
+        $data = $request->validate([
+            'exercise_id' => 'required|exists:exercises,id',
+            'week_day' => 'required|string',
+            'reps' => 'nullable|integer',
+            'weight' => 'nullable|numeric',
+        ]);
 
-        return response()->json(['message' => 'Exercício vinculado ao treino.']);
+        $training->exercises()->attach($data['exercise_id'], [
+            'week_day' => $data['week_day'],
+            'reps' => $data['reps'],
+            'weight' => $data['weight'],
+        ]);
+
+        return response()->json(['message' => 'Exercício adicionado com sucesso']);
     }
 
-    public function removeExercise(Training $training, Exercise $exercise){
-        $training->exercises()->detach($exercise->id);
+
+    public function removeExercise(Request $request, $trainingId)
+    {
+        $request->validate([
+            'exercise_id' => 'required|uuid|exists:exercises,id',
+            'week_day' => 'required|string'
+        ]);
+
+        $training = Training::findOrFail($trainingId);
+
+        $training->exercises()->wherePivot('exercise_id', $request->exercise_id)
+                              ->wherePivot('week_day', $request->week_day)
+                              ->detach();
 
         return response()->json([
-            'message' => 'Exercício removido do treino com sucesso.'
+            'message' => 'Exercício removido com sucesso!'
         ]);
     }
+
+
+
+    public function updateExercise(Request $request, Training $training, string $pivotId)
+    {
+        $data = $request->validate([
+        'week_day' => 'required|string',
+        'reps' => 'nullable|integer',
+        'weight' => 'nullable|numeric',
+        ]);
+
+        $exercisePivot = DB::table('training_exercises')
+            ->where('id', $pivotId)
+            ->first();
+
+        if (!$exercisePivot) {
+            return response()->json(['message' => 'Exercício não encontrado'], 404);
+        }
+
+        DB::table('training_exercises')
+            ->where('id', $pivotId)
+            ->update($data);
+
+        return response()->json(['message' => 'Exercício atualizado com sucesso']);
+    }
+
+
 
     /**
      * Display a listing of the resource.
@@ -58,8 +105,9 @@ class TrainingController extends Controller
      */
     public function show(Training $training)
     {
-        return response()->json($training->load('exercises'));
+        return $training->load('exercises');
     }
+
     /**
      * Update the specified resource in storage.
      */
