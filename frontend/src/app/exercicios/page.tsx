@@ -29,7 +29,7 @@ export default function ExercisesPage() {
     useState<Exercise | null>(null);
 
   async function fetchExercises() {
-    const res = await fetch('http://localhost:8000/exercises');
+    const res = await fetch(`http://localhost:8000/exercises`);
     const data: Exercise[] = await res.json();
     setExercises(data);
   }
@@ -48,7 +48,7 @@ export default function ExercisesPage() {
     let isMounted = true;
 
     async function loadExercises() {
-      const res = await fetch('http://localhost:8000/exercises');
+      const res = await fetch(`http://localhost:8000/exercises`);
       const data: Exercise[] = await res.json();
       if (isMounted) {
         setExercises(data);

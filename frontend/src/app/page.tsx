@@ -17,7 +17,7 @@ export default function TrainingsPage() {
   const [isCreateOpen, setIsCreateOpen] = useState(false);
 
   async function fetchTrainings() {
-    const res = await fetch('http://localhost:8000/trainings');
+    const res = await fetch(`http://localhost:8000/trainings`);
     const data = await res.json();
     setTrainings(data);
   }

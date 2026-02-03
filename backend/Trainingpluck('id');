@@ -1,0 +1,75 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#6472
+    [34mall[39m: [
+      [34;4mApp\Models\Training[39;24m {#6449
+        [34mid[39m: "[32m019c20a8-ee0d-7121-b525-ea7e331ad948[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32mvoluptates numquam[39m",
+        [34mdescription[39m: "[32mIllo enim voluptas officiis autem officia qui distinctio. Impedit et error qui accusantium deserunt.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6448
+        [34mid[39m: "[32m019c20a8-ee10-703c-8218-faa91ed5e457[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32mdistinctio unde[39m",
+        [34mdescription[39m: "[32mIpsum vel in enim. Iusto iusto voluptas fuga quibusdam accusamus. Veniam voluptatem consequatur nihil eaque nihil sequi. Quia ea deleniti inventore pariatur est qui et.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6447
+        [34mid[39m: "[32m019c20a8-ee13-7375-93a9-c03a4cef06e4[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32maut et[39m",
+        [34mdescription[39m: "[32mEt ducimus ullam ullam qui. Nam voluptatem autem necessitatibus eum natus nostrum sit. Molestias nesciunt voluptatem sequi sed sit fugiat perspiciatis. Consequatur illum iure autem laboriosam repellendus debitis.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6446
+        [34mid[39m: "[32m019c20a8-ee15-70b5-8666-6e4c48895051[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32mcumque consectetur[39m",
+        [34mdescription[39m: "[32mEos cum vitae et amet modi est similique sit. Architecto enim dolores enim eum qui vel quis. Nulla quos illum ut voluptatum.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6445
+        [34mid[39m: "[32m019c20a8-ee18-7008-9766-a926698e715c[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32mrepellendus qui[39m",
+        [34mdescription[39m: "[32mUt iste quos officia. Odit minima nihil similique quia non aliquam.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6444
+        [34mid[39m: "[32m019c20a8-ee1a-73f3-ac34-8e59b89c9598[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32mhic reiciendis[39m",
+        [34mdescription[39m: "[32mId ratione sit animi. Deleniti similique rerum aperiam quas. Porro rerum ducimus asperiores id.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6443
+        [34mid[39m: "[32m019c20a8-ee1c-718a-a553-a9b3cbe2ffe3[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32mnecessitatibus laboriosam[39m",
+        [34mdescription[39m: "[32mAut nam eos eum eveniet omnis sunt voluptate. Sit sit nesciunt nostrum vel. Voluptas pariatur autem sapiente et labore vel.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6442
+        [34mid[39m: "[32m019c20a8-ee1f-73e6-ab4c-f3847d0b6134[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32modio sequi[39m",
+        [34mdescription[39m: "[32mEnim consequatur qui esse id qui amet reprehenderit. Molestiae doloremque perspiciatis error cupiditate asperiores. Non voluptatibus aut magnam hic saepe similique et. Officia consequatur eos et quas harum eum.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6441
+        [34mid[39m: "[32m019c20a8-ee21-7354-865a-261eba375214[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32mest quia[39m",
+        [34mdescription[39m: "[32mSed sed facilis omnis est odit ut. Unde aliquid nisi consequuntur unde fugit tempore. Qui accusamus cupiditate facere voluptatem. Consequuntur distinctio mollitia omnis porro porro omnis.[39m",
+      },
+      [34;4mApp\Models\Training[39;24m {#6440
+        [34mid[39m: "[32m019c20a8-ee25-7264-8d09-6afc99be049f[39m",
+        [34mcreated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mupdated_at[39m: "[32m2026-02-02 23:21:07[39m",
+        [34mname[39m: "[32mducimus at[39m",
+        [34mdescription[39m: "[32mSoluta fugiat voluptatem tenetur voluptas voluptates corrupti quaerat. Quas architecto dignissimos aut. Ut sed iusto aut rem qui. Ipsa veniam animi explicabo cumque quis.[39m",
+      },
+    ],
+  }
+

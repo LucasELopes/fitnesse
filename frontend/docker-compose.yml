@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build: .
+    container_name: next_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://nginx
+    networks:
+      - backend_laravel
+
+networks:
+  backend_laravel:
+    external: true

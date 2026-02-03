@@ -51,7 +51,7 @@ export default function CreateExerciseModal({
   useEffect(() => {
     async function fetchExercises() {
       try {
-        const res = await fetch('http://localhost:8000/exercises');
+        const res = await fetch(`http://localhost:8000/exercises`);
         const data: Exercise[] = await res.json();
         setExercises(data);
       } catch (err) {

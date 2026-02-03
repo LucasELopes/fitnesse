@@ -25,7 +25,7 @@ export default function CreateExerciseModal({
     setLoading(true);
 
     try {
-      await fetch('http://localhost:8000/exercises', {
+      await fetch(`http://localhost:8000/exercises`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
