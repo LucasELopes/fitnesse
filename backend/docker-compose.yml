@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   app:
     build:
@@ -8,7 +6,6 @@ services:
     container_name: laravel_app
     volumes:
       - .:/var/www
-    working_dir: /var/www
     depends_on:
       - db
     networks:
@@ -32,12 +29,8 @@ services:
     container_name: laravel_db
     restart: always
     environment:
-      MYSQL_DATABASE: mygym
-      MYSQL_USER: laravel
-      MYSQL_PASSWORD: laravel
-      MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3306:3306"
+      MYSQL_DATABASE: adapti
+      MYSQL_ROOT_PASSWORD: 130708
     volumes:
       - dbdata:/var/lib/mysql
     networks:
